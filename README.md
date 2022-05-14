@@ -29,6 +29,8 @@ When development first started at Mimus Studios, no developers knew any SugarCub
 ## Problem Statement
 The goal of this interview is to not only assess your ability to work within a predefined environment, but to also assess your creativity, ability to learn, and tenacity. The problem is as follows: Implement a simple, single-round Blackjack game without the need for doubling down or splitting. The only requirements are that the game is playable; and that the assets under `resources/images/deck` are somehow utilized. All other details are up to your discretion, and we hope that allowing such freedom can allow you to exibit your skillset and creativity to us.
 
+You will write all of your code in `Start.tw`, `styles/core.css`, and `scripts/core.js`.
+
 ## Scoring
 The scoring of this question will be holistic in nature. What we are looking for is clean and efficient code, proper comments and documentation, and some effort into UI design / optimization.
 
