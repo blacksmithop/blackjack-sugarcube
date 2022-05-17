@@ -7,7 +7,7 @@
 }
 
 :: StoryTitle
-Backjack Interview
+Backjack
 
 :: Start [black]
 <<nobr>>
@@ -16,31 +16,30 @@ Backjack Interview
     <div class="main container fourCol threeRow" style="height: 100%; width: 100%;">
         <div class="subbackground mainLogContainer">
              <div id="mainLogImageContainer" class="mainLogImageContainer">
-                <div id="mainLogImage" class="mainLogImage"></div>
+                <div id="mainLogImage" class="mainLogImage">
+                </div>
             </div>
             <div id="mainLog" class="mainLog">
-                <b>
-                    Blackjack Interview:
-                </b><br>
-                <p>
-                    Welcome to the Blackjack interview. In this interview you'll be implementing a simple game of blackjack without 
-                    the options to split or double down. You'll only be given the options to hit or stay. You can find the rules of 
-                    blackjack <a href="https://bicyclecards.com/how-to-play/blackjack/">here</a>. You'll need to use the resources in 
-                    <span style="color: yellow">resources/images/deck</span> as well. The positioning / how you display these cards will 
-                    be up to you. Perhaps you can use the mainLogImage or infoLog.
-                    <br><br>
-                    The deal button deals the cards to both the dealer and the player, and should only be able to be pressed once. No need to 
-                    allow the player to replay the game. 
-                    <br><br>
-                    The hit button draws a card from the deck and adds it to the players hand. Going over should result in a bust and 
-                    end the game. Make sure to account for aces being a low / high as well!
-                    <br><br>
-                    The stay button should also only be able to be hit once, and the dealer will finish his hand.
-                    <br><br>
-                    At the end of the game, output the result into the mainlog.
-                    <br><br>
-                    This engine will be modified and added to FCO eventually.
-                </p>
+                <p id="game-title" class="center">Blackjack</p>
+                <div id="card-deck">
+                    <div id="player-hand">
+                        <span id="faction-text">Player</span>
+                        <div id="score-box">
+                            <p id="player-score">0</p>
+                        </div>
+                        <div class="player-cards">
+                        </div>
+                   </div>
+                    <div id="hand-divide"></div>
+                    <div id="dealer-hand">
+                        <span id="faction-text">Dealer</span>
+                         <div id="score-box">
+                            <p id="dealer-score">xx</p>
+                        </div>
+                          <div class="dealer-cards">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -49,9 +48,14 @@ Backjack Interview
 
         <div id="action_bar" class="subbackground" style="grid-row: 3 / span 1; grid-column: 1 / span 3">
             <div id="buttons" class="action container row col longbutton fiveQuarters" style="--rows: 4; --cols: 4">
-                <<button "Deal">><</button>>
-                <<button "Hit">><</button>>
-                <<button "Stay">><</button>>
+                <<button "Deal">>
+                <</button>>
+                <<button "Hit">>
+                    <<script>>hit();<</script>>
+                <</button>>
+                <<button "Stay">>
+                    <<script>>stand();<</script>>
+                <</button>>
             </div>
         </div>
     </div>
